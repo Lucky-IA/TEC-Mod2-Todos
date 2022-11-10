@@ -61,12 +61,12 @@
 - Organizar el código o los scripts en una estructura de directorio [ok]
 - Cree los archivos necesarios de empaquetado
 - Cuide las referencias (imports) intra-paquete [dev]
-- Verifique que el código siga el PEP 8
-- Agregue Python annotations a sus funciones
-- Verifique que sus funciones tengan docstrings
+- Verifique que el código siga el PEP 8 [dev]
+- Agregue Python annotations a sus funciones [dev]
+- Verifique que sus funciones tengan docstrings [dev]
 - Agregue pruebas unitarias y de integración que crea convenientes
 - Hacer ejecutable el módulo y probarlo en un venv
-- Cree un repositorio en su cuenta de GitHub y suba el proyecto [dev]
+- Cree un repositorio en su cuenta de GitHub y suba el proyecto [ok]
 
 ## Project Structuring
 
@@ -75,6 +75,31 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+## Package References
+
+   ├── src
+   │   ├── main_todo.py                 <- Main: Cli Methods
+   │   │   ├── packages                 <- Packages Folder
+   │   │   │   ├── class_todo.py        <- Class: Methods Refactored
+
+## PEP 8 Style Guide
+
+<!-- pip install pre-commit -->
+black example_function.py
+flake8 example_function.py
+<!-- pip install isort -->
+isort example_function.py
+
+## Annotations
+
+<!-- https://ellibrodepython.com/function-annotations -->
+
+## Docstrings
+
+<!-- pip install interrogate -->
+interrogate -vv example_function.py
+<!-- pydoc (google docstrings) - pdoc -->
 
 ## GitHub Repository
 
@@ -88,11 +113,8 @@ git remote add origin https://github.com/Lucky-IA/TEC-Mod2-Todos.git
 git branch -M main
 git push -u origin main
 
-
-
-## Resources
-
-https://drivendata.github.io/cookiecutter-data-science/
-
-https://towardsdatascience.com/automate-the-structure-of-your-data-science-projects-with-cookiecutter-937b244114d8
+git status
+git add .
+git commit -m "update readme"
+git push
 
