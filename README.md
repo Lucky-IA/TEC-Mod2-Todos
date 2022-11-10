@@ -60,7 +60,7 @@
 
 - Organizar el código o los scripts en una estructura de directorio [ok]
 - Cree los archivos necesarios de empaquetado
-- Cuide las referencias (imports) intra-paquete
+- Cuide las referencias (imports) intra-paquete [dev]
 - Verifique que el código siga el PEP 8
 - Agregue Python annotations a sus funciones
 - Verifique que sus funciones tengan docstrings
@@ -81,10 +81,14 @@ pip install -r requirements.txt
 https://github.com/Lucky-IA/TEC-Mod2-Todos
 
 git init
+git add .
+git commit -m "first commit"
 
 git remote add origin https://github.com/Lucky-IA/TEC-Mod2-Todos.git
 git branch -M main
 git push -u origin main
+
+
 
 ## Resources
 
