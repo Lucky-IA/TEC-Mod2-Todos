@@ -10,6 +10,7 @@ from datetime import datetime
 #     j = cards_db.add_card(Card("bar"))
 #     k = cards_db.add_card(Card("baz"))
 #     return (i, j, k)  # ids for the cards
+
 @pytest.fixture(scope="function")
 def tmp_dir(tmpdir_factory):
     my_tmpdir = tmpdir_factory.mktemp("pytestdata")

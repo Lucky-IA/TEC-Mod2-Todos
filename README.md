@@ -60,11 +60,11 @@
 
 - Organizar el código o los scripts en una estructura de directorio [ok]
 - Cree los archivos necesarios de empaquetado
-- Cuide las referencias (imports) intra-paquete [dev]
-- Verifique que el código siga el PEP 8 [dev]
-- Agregue Python annotations a sus funciones [dev]
-- Verifique que sus funciones tengan docstrings [dev]
-- Agregue pruebas unitarias y de integración que crea convenientes
+- Cuide las referencias (imports) intra-paquete [ok]
+- Verifique que el código siga el PEP 8 [ok]
+- Agregue Python annotations a sus funciones [ok]
+- Verifique que sus funciones tengan docstrings [ok]
+- Agregue pruebas unitarias y de integración que crea convenientes [dev]
 - Hacer ejecutable el módulo y probarlo en un venv
 - Cree un repositorio en su cuenta de GitHub y suba el proyecto [ok]
 
@@ -79,27 +79,42 @@ pip install -r requirements.txt
 ## Package References
 
    ├── src
-   │   ├── main_todo.py                 <- Main: Cli Methods
+   │   ├── main_todo.py                 <- Main: Client Methods
    │   │   ├── packages                 <- Packages Folder
    │   │   │   ├── class_todo.py        <- Class: Methods Refactored
 
 ## PEP 8 Style Guide
 
-<!-- pip install pre-commit -->
-black example_function.py
-flake8 example_function.py
-<!-- pip install isort -->
-isort example_function.py
+black src/main_todo.py 
+black src/packages/class_todo.py 
 
-## Annotations
+flake8 src/main_todo.py
+flake8 src/packages/class_todo.py 
 
-<!-- https://ellibrodepython.com/function-annotations -->
+isort src/main_todo.py 
+isort src/packages/class_todo.py 
+
+## Annotations 
+
+src/main_todo.py 
+src/packages/class_todo.py 
 
 ## Docstrings
 
-<!-- pip install interrogate -->
-interrogate -vv example_function.py
-<!-- pydoc (google docstrings) - pdoc -->
+<!-- pip install git+https://github.com/dadadel/pyment.git -->
+pyment -w src/packages/class_todo.py
+
+interrogate -vv src/packages/class_todo.py
+
+pycodestyle --first src/packages/class_todo.py
+pycodestyle --show-source --show-pep8 src/packages/class_todo.py
+pycodestyle src/packages/class_todo.py --format=pylint
+
+pylint src/packages/class_todo.py
+
+## PyTest
+
+
 
 ## GitHub Repository
 

@@ -1,21 +1,20 @@
-import os
 import typer
-import pandas as pd
+
 from datetime import datetime
 from pathlib import Path
-
 from packages import class_todo
+
 
 PATH = str(Path(__file__).parent)
 PATH_TO_DATA = f"{PATH}/data/"
- 
+
 todos = class_todo.ToDo(PATH_TO_DATA)
 
 app = typer.Typer(add_completion=False)
 
 
 @app.command("create")
-def create(name: str = typer.Option("Unnamed", "-ln", "--listname")):
+def create(name: str = typer.Option("Unnamed", "-ln", "--listname")) -> None:
 
     """Create a new todo list"""
 
@@ -28,7 +27,7 @@ def create(name: str = typer.Option("Unnamed", "-ln", "--listname")):
 
 
 @app.command("list")
-def list_lists():
+def list_lists() -> None:
 
     """Lists all existing todo lists"""
 
@@ -38,8 +37,11 @@ def list_lists():
 
 
 @app.command("show")
-def show_list(list_name: str = typer.Option(..., "-ln", "--listname")):
+def show_list(list_name: str = typer.Option(..., "-ln", "--listname")
+             ) -> None:
+
     """Shows Task in one list"""
+
     if not todos.check_list_exists(list_name):
         print("The list does not exist. Use create list first.")
         return
@@ -53,7 +55,8 @@ def add_task(
     task_name: str = typer.Option(..., "-tn", "--taskame"),
     summary: str = typer.Option(None, "-d", "--description"),
     owner: str = typer.Option(..., "-o", "--owner"),
-):
+) -> None:
+
     """Add a task to a given todo list"""
 
     if not todos.check_list_exists(list_name):
@@ -78,9 +81,10 @@ def update_task(
     task_id: int = typer.Option(..., "-i", "--taskid"),
     field: str = typer.Option(..., "-f", "--field"),
     change: str = typer.Option(..., "-c", "--change"),
-):
+) -> None:
 
     """Update a task in a given todo list"""
+    
     if not todos.check_list_exists(list_name):
         print("The list does not exist. Use create list first.")
         return
