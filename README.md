@@ -60,15 +60,15 @@ TEC Monterrey - Machine Learning - Entregable Modulo 2
 
 ## Project Target 
 
-- Organizar el código o los scripts en una estructura de directorio [ok]
-- Cree los archivos necesarios de empaquetado [ok]
-- Cuide las referencias (imports) intra-paquete [ok]
-- Verifique que el código siga el PEP 8 [ok]
-- Agregue Python annotations a sus funciones [ok]
-- Verifique que sus funciones tengan docstrings [ok]
-- Agregue pruebas unitarias y de integración que crea convenientes [ok]
-- Hacer ejecutable el módulo y probarlo en un venv [dev]
-- Cree un repositorio en su cuenta de GitHub y suba el proyecto [ok]
+- Organizar el código o los scripts en una estructura de directorio
+- Cree los archivos necesarios de empaquetado
+- Cuide las referencias (imports) intra-paquete
+- Verifique que el código siga el PEP 8
+- Agregue Python annotations a sus funciones
+- Verifique que sus funciones tengan docstrings
+- Agregue pruebas unitarias y de integración que crea convenientes
+- Hacer ejecutable el módulo y probarlo en un venv
+- Cree un repositorio en su cuenta de GitHub y suba el proyecto
 
 ## Project Structuring
 
@@ -126,17 +126,18 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ## Create Packaging Files
 
+<!-- pipx install poetry -->
 - poetry init
 
 - poetry add pandas==1.3.5
 - poetry add typer
-- poetry add pytest
-- poetry add black
-- poetry add flake8
-- poetry add isort
-- poetry add pyment
-- poetry add interrogate
-- poetry add pycodestyle
+- poetry add --dev pytest
+- poetry add --dev black
+- poetry add --dev flake8
+- poetry add --dev isort
+- poetry add --dev pyment
+- poetry add --dev interrogate
+- poetry add --dev pycodestyle
 
 - poetry update
 <!-- poetry remove <library-name> -->
@@ -146,11 +147,8 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ## Execute Packing Modules 
 
-poetry run tec-mod2-todos
-[poetry install]
-
-<!-- poetry new <project-name>
-[poetry env use <path env>] -->
+- poetyr install
+- poetry build
 
 ## GitHub Repository
 
