@@ -1,6 +1,8 @@
 # Proyecto Todo List
 
-**TEC Monterrey - Machine Learning - Entregable Modulo 2 [Alex Castro Gumiel]**
+TEC Monterrey - Machine Learning - Entregable Modulo 2
+
+**Alex Castro Gumiel]**
 
 ## Project Organization
 
@@ -72,15 +74,18 @@
 
 cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+- python3 -m venv venv
+- source venv/bin/activate
+- pip install -r requirements.txt
 
 ## Package References
 
    ├── src
+
    │   ├── main_todo.py                 <- Main: Client Methods
+
    │   │   ├── packages                 <- Packages Folder
+
    │   │   │   ├── class_todo.py        <- Class: Methods Refactored
 
 ## PEP 8 Style Guide
@@ -96,26 +101,26 @@ pip install -r requirements.txt
 
 ## Annotations 
 
-src/main_todo.py 
-src/packages/class_todo.py 
+- src/main_todo.py 
+- src/packages/class_todo.py 
 
 ## Docstrings
 
 <!-- pip install git+https://github.com/dadadel/pyment.git -->
-pyment -w src/packages/class_todo.py
+- pyment -w src/packages/class_todo.py
 
-interrogate -vv src/packages/class_todo.py
+- interrogate -vv src/packages/class_todo.py
 
-pycodestyle --first src/packages/class_todo.py
-pycodestyle --show-source --show-pep8 src/packages/class_todo.py
-pycodestyle src/packages/class_todo.py --format=pylint
+- pycodestyle --first src/packages/class_todo.py
+- pycodestyle --show-source --show-pep8 src/packages/class_todo.py
+- pycodestyle src/packages/class_todo.py --format=pylint
 
-pylint src/packages/class_todo.py
+- pylint src/packages/class_todo.py
 
 ## Unit & Integration Tests
 
-pytest tests/unit/test_unit.py -v
-pytest tests/integration/test_integration.py -v
+- pytest tests/unit/test_unit.py -v
+- pytest tests/integration/test_integration.py -v
 
 ## Create Packaging Files
 
@@ -132,16 +137,16 @@ poetry show --tree
 
 https://github.com/Lucky-IA/TEC-Mod2-Todos
 
-git init
-git add .
-git commit -m "first commit"
+- git init
+- git add .
+- git commit -m "first commit"
 
-git remote add origin https://github.com/Lucky-IA/TEC-Mod2-Todos.git
-git branch -M main
-git push -u origin main
+- git remote add origin https://github.com/Lucky-IA/TEC-Mod2-Todos.git
+- git branch -M main
+- git push -u origin main
 
-git status
-git add .
-git commit -m "update readme"
-git push
+- git status
+- git add .
+- git commit -m "update readme"
+- git push
 
