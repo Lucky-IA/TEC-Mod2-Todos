@@ -2,7 +2,7 @@
 
 TEC Monterrey - Machine Learning - Entregable Modulo 2
 
-**Alex Castro Gumiel]**
+**Alex Castro Gumiel**
 
 ## Project Organization
 
@@ -61,13 +61,13 @@ TEC Monterrey - Machine Learning - Entregable Modulo 2
 ## Project Target 
 
 - Organizar el código o los scripts en una estructura de directorio [ok]
-- Cree los archivos necesarios de empaquetado [dev]
+- Cree los archivos necesarios de empaquetado [ok]
 - Cuide las referencias (imports) intra-paquete [ok]
 - Verifique que el código siga el PEP 8 [ok]
 - Agregue Python annotations a sus funciones [ok]
 - Verifique que sus funciones tengan docstrings [ok]
 - Agregue pruebas unitarias y de integración que crea convenientes [ok]
-- Hacer ejecutable el módulo y probarlo en un venv
+- Hacer ejecutable el módulo y probarlo en un venv [dev]
 - Cree un repositorio en su cuenta de GitHub y suba el proyecto [ok]
 
 ## Project Structuring
@@ -103,6 +103,8 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 - src/main_todo.py 
 - src/packages/class_todo.py 
+- src/tests/unit/test_unit.py 
+- src/tests/integration/test_integration.py 
 
 ## Docstrings
 
@@ -124,14 +126,31 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ## Create Packaging Files
 
-[pip install poetry]
-poetry new <project-name>
-[poetry env use <path env>]
-poetry install
-poetry add <library-name>
-poetry remove <library-name>
-poetry show
-poetry show --tree
+- poetry init
+
+- poetry add pandas==1.3.5
+- poetry add typer
+- poetry add pytest
+- poetry add black
+- poetry add flake8
+- poetry add isort
+- poetry add pyment
+- poetry add interrogate
+- poetry add pycodestyle
+
+- poetry update
+<!-- poetry remove <library-name> -->
+
+- poetry show
+- poetry show --tree
+
+## Execute Packing Modules 
+
+poetry run tec-mod2-todos
+[poetry install]
+
+<!-- poetry new <project-name>
+[poetry env use <path env>] -->
 
 ## GitHub Repository
 
