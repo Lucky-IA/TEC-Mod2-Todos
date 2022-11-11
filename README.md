@@ -59,12 +59,12 @@
 ## Project Target 
 
 - Organizar el código o los scripts en una estructura de directorio [ok]
-- Cree los archivos necesarios de empaquetado
+- Cree los archivos necesarios de empaquetado [dev]
 - Cuide las referencias (imports) intra-paquete [ok]
 - Verifique que el código siga el PEP 8 [ok]
 - Agregue Python annotations a sus funciones [ok]
 - Verifique que sus funciones tengan docstrings [ok]
-- Agregue pruebas unitarias y de integración que crea convenientes [dev]
+- Agregue pruebas unitarias y de integración que crea convenientes [ok]
 - Hacer ejecutable el módulo y probarlo en un venv
 - Cree un repositorio en su cuenta de GitHub y suba el proyecto [ok]
 
@@ -85,14 +85,14 @@ pip install -r requirements.txt
 
 ## PEP 8 Style Guide
 
-black src/main_todo.py 
-black src/packages/class_todo.py 
+- black src/main_todo.py 
+- black src/packages/class_todo.py 
 
-flake8 src/main_todo.py
-flake8 src/packages/class_todo.py 
+- flake8 src/main_todo.py
+- flake8 src/packages/class_todo.py 
 
-isort src/main_todo.py 
-isort src/packages/class_todo.py 
+- isort src/main_todo.py 
+- isort src/packages/class_todo.py 
 
 ## Annotations 
 
@@ -112,9 +112,21 @@ pycodestyle src/packages/class_todo.py --format=pylint
 
 pylint src/packages/class_todo.py
 
-## PyTest
+## Unit & Integration Tests
 
+pytest tests/unit/test_unit.py -v
+pytest tests/integration/test_integration.py -v
 
+## Create Packaging Files
+
+[pip install poetry]
+poetry new <project-name>
+[poetry env use <path env>]
+poetry install
+poetry add <library-name>
+poetry remove <library-name>
+poetry show
+poetry show --tree
 
 ## GitHub Repository
 
