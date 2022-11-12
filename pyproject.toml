@@ -5,7 +5,8 @@ description = "ML Modulo 2"
 authors = ["Alex Castro Gumiel"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "tec_mod2_todos"}]
+packages = [{include = "src/"}, 
+            {include = "tests/"}]
 
 [tool.poetry.dependencies]
 python = ">=3.7.1,<4.0"

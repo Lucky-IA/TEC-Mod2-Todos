@@ -126,7 +126,6 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ## Create Packaging Files
 
-<!-- pipx install poetry -->
 - poetry init
 
 - poetry add pandas==1.3.5
@@ -147,8 +146,10 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ## Execute Packing Modules 
 
-- poetyr install
 - poetry build
+- [dist/tec_mod2_todos-0.1.0.tar.gz]
+- [tec_mod2_todos-0.1.0-py3-none-any.whl]
+<!-- pip install dist/tec_mod2_todos-0.1.0.tar.gz -->
 
 ## GitHub Repository
 
